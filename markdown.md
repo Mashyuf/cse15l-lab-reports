@@ -6,7 +6,7 @@
 
 ## Markdown
 
-[Link](google.com)
+[Link](https://www.google.com/)
 
 ![Image](https://i.imgur.com/9q6z6Zt.png)
 
