@@ -99,8 +99,41 @@ Now, if you log in to your remote client and type `ls`, you should be able to se
 
 ---
 
+By setting up an SSH key, you can bypass the password section and directly enter your remote client. This can save quite a bit of time as entering password everytime you try to log in is time-consuming and annoying.
+
+Follow the following steps to set up an SSH key:
 
 
+1. Type ` ssh-keygen` on your local client. (All steps here should be done on your local client)
+2. The terminal will output the following:
+    ```
+    Generating public/private rsa key pair.
+    Enter file in which to save the key (/Users/<user-name>/.ssh/id_rsa):
+    ```
+3. Type `/Users/[Username]/ssh/id_rsa` on your terminal
+
+    The terminal will now output the following:
+    ```
+    Enter passphrase (empty for no passphrase):
+    ```
+4. Do not enter anything, just press "enter". The terminal will prompt your to reenter the passphrase, again, do not enter anything and press "enter.
+5. If the terminal outputs a `key fingerprint` and a `key's randomart image`, then you have successfully set up an SSH key.
+
+If you now try to log in your remote client, you shouldn't need to enter your password.
+
+A similar situation to the following should show up on your terminal:
+
+![Image](SSH_Key.png)
+
+## Optimizing Remote Running
+
+---
+
+There are some methods that allows remote operations to be even more efficient.
+
+For example, you can directly put a command in quotation marks in your `ssh` command.
+
+![Image](Optimize.png)
 
 
 
