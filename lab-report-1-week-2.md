@@ -23,6 +23,87 @@ Next Step is to connect to a remote client through your own laptop/desktop.
 3. Enter your password after the computer prompt you
 4. You should be connected to the remote client now
 
-You should be able to see something similar to this on your terminal
+You should be able to see something similar to this on your terminal:
 
 ![Image](Connected.png)
+
+When connecting to the remote client for the first time, the following message may pop up on your terminal:
+
+![Image](pop_up.png)
+
+Type `no` in your client and you should be able to proceed.
+
+## Trying Some Commands
+
+---
+
+After connecting to the remote client, you now can try some commands to interact with the remote client.
+
+A few commands that you can try are: `ls, cat, touch`.
+
+- **ls**
+
+    This command list out all the files within a client, or within a specific directory.
+
+    This image is an example output of that command
+
+    ![Image](ls.png)
+    
+- **cat**
+
+    This command allows you to view a file within the remote client.
+
+    This image is an example output of that command, it shows the content of `WhereAmI.java` which is stored remotely.
+
+    ![Image](cat.png)
+
+- **touch**
+
+    This command allows you to create a new file on the remote client
+
+    This image is an example output of that command. Notice that there's now a new file named `test.txt` on the client.
+
+    ![Image](touch.png)
+
+- **exit**
+
+    This command logs you out of the remote client.
+
+    This image is an example output of that command.
+
+    ![Image](exit.png)
+
+## Moving Files with `scp`
+
+---
+
+The `scp` command allows you to move a file from you local client to a remote client.
+
+This command is always executed on your local client, so you need to first log out of the remote client.
+
+The format for the `scp` command is as follow:
+
+`scp [file name on your local client] [destination on the remote client]`
+
+The file name on your local client can be just the file name, or the complete directory to that file.
+
+Afterwards, the terminal will prompt you to enter the password. If the name of your file that is moved pops up next, then this action is successful.
+
+You should be seeing something similar on your terminal:
+
+![Image](scp.png)
+
+Now, if you log in to your remote client and type `ls`, you should be able to see your file there.
+
+## Setting up an SSH Key
+
+---
+
+
+
+
+
+
+
+
+
